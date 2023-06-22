@@ -1,15 +1,42 @@
+body {
+    background-color: rgb(18, 18, 50) !important;
+}
+
 html{
     font-family: 'DM Sans', sans-serif;
     background-color: rgb(18, 18,50);
 }
 
+.funnav{
+    height: 5.5em;
+}
+
+.navzin{
+    width: 85%;
+    height: 4em;
+    margin-top: 2em;
+    background-color: aliceblue;
+    opacity : 0.5;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
 main{
-    background-color: rgb(18, 18,50);
+    background-color: rgb(18, 18,50)
 }
 
 .logo{
     width: auto;
     margin-top: 0.17em;
+}
+
+.blobinhos{
+    width: 5em;
+    height: 5em;
+    background: rgba(255, 255, 255, 0.13);
+    border-radius: 27% 73% 43% 57% / 81% 27% 73% 19%;
+    margin:5em 0 0 5em;
 }
 
 .blob {
@@ -18,11 +45,38 @@ main{
     background: rgb(195,96,34);
     background: linear-gradient(0deg, rgba(195,96,34,1) 0%, rgba(192,81,62,1) 44%, rgba(253,45,45,1) 100%);
     border-radius: 69% 31% 44% 56% / 19% 21% 79% 81% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:2em 0 0 5em;
+}
+
+.blob2 {
+    width: 20em;
+    height: 20em;
+    border-radius: 33% 67% 27% 73% / 83% 35% 65% 17%;
+    background: rgb(0,253,255);
+    background: linear-gradient(0deg, rgba(0,253,255,1) 0%, rgba(62,192,171,1) 44%, rgba(45,253,55,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blob3 {
+    width: 20em;
+    height: 20em;
+    border-radius: 74% 26% 32% 68% / 49% 44% 56% 51%;
+    background: rgb(255,0,249);
+    background: linear-gradient(0deg, rgba(255,0,249,1) 0%, rgba(171,62,192,1) 44%, rgba(51,45,253,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h2{
-    font-family: kallisto, sans-serif;
-    font-style: normal;
-    font-weight: 200;
+    font-family: 'Geologica', sans-serif;
+    font-family: 'Lekton', sans-serif;
+    font-family: 'Lexend Peta', sans-serif;
 }
+
   
