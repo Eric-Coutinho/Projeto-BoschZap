@@ -10,64 +10,74 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geologica:wght@500&family=Lekton&family=Lexend+Peta:wght@500&display=swap"
+    rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
   </script>
 </head>
 
 <body>
-  <nav class="navbar bg-body-tertiary">
-    <div class="container-fluid" style="justify-content: center;">
-      <a class="navbar-brand" href="#">
-        <img src="img/Bosch-logo.svg.png" alt="Logo PlaceHolder" width="30" height="24"
-          class="logo d-inline-block align-text-top">
-        BoschZap
-      </a>
+  <div class="container-fluid d-flex justify-content-center funnav">
+    <div class="navzin shadow-lg">
     </div>
-  </nav>
-  <main>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm">
-          <div class="blob shadow d-flex">
-            <H2>MATEUS</H2>
+  </div>
+
+  <main class="container">
+    <div class="row">
+      <div class="col-lg-4 order-lg-2" id="desisto" style="display: flex; justify-content: center; margin-top: 1.5em;">
+        <div class="card formulario" id="formulario">
+          <div class="card-body" id="corpoform">
+            <form action="post">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Usuário">
+                <label for="floatingInput">Usuário</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" class="form-control link" id="floatingPassword" placeholder="Senha">
+                <label for="floatingPassword">Senha</label>
+                <a href="recupera.html" class="displaylink">Esqueceu a Senha?</a>
+              </div>
+              <div class="botao">
+                <button type="button" class="btn btn-primary btn-sm" id="botoes">Login</button>
+              </div>
+            </form>
+            <div class="botao2">
+              <a href="registro.html" class="displaylink">Crie uma conta</a>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="col-sm">
-          <div class="row" id="linhaform">
-            <div class="card formulario" id="formulario">
-              <div class="card-body" id="corpoform">
-                <form action="post">
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Usuário">
-                    <label for="floatingInput">Usuário</label>
-                  </div>
-                  <div class="form-floating">
-                    <input type="password" class="form-control link" id="floatingPassword" placeholder="Senha">
-                    <label for="floatingPassword">Senha</label>
-                    <a href="recupera.html" class="displaylink">Esqueceu a Senha?</a>
-                  </div>
-                  <div class="botao">
-                    <button type="button" class="btn btn-primary btn-sm" id="botoes">Login</button>
-                  </div>
-                </form>
-                <div class="botao2">
-                  <a href="registro.html" class="displaylink">Crie uma conta</a>
-                </div>
-              </div>
+      <div class="col-lg-8 order-lg-1">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="blob shadow">
+              <h2>GRUPOS</h2>
             </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="blob3 shadow">
+              <h2>GRUPOS</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <div class="blob2 shadow">
+              <h2>GRUPOS</h2>
+            </div>
+          </div>
+          <div class="col-md-2">
           </div>
         </div>
       </div>
     </div>
   </main>
-
 </body>
 
 </html>
