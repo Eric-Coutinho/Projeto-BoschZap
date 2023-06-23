@@ -1,0 +1,126 @@
+body {
+    background-color: rgb(18, 18, 50) !important;
+}
+
+html{
+    font-family: 'DM Sans', sans-serif;
+    background-color: rgb(18, 18, 50);
+}
+
+.funnav{
+    height: 5.5em;
+}
+
+.navzin{
+    width: 85%;
+    height: 4em;
+    margin-top: 2em;
+    background-color: aliceblue;
+    opacity : 0.5;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+main{
+    background-color: rgb(18, 18,50)
+}
+
+
+main {
+    background-color: rgb(18, 18, 50);
+}
+
+.logo {
+    width: auto;
+    margin-top: 0.17em;
+}
+
+#formulario {
+    background-color: rgba(22, 22, 73, 0.438);
+    border-radius: 15px;
+    width: fit-content;
+}
+
+#linhaform {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.botao {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1em;
+}
+
+.botao2 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5em;
+    text-decoration: none ;
+}
+
+#botoes {
+    padding: 1em;
+    width: 75%;
+    font-family: 'DM Sans', sans-serif;
+}
+.link{
+    margin-bottom: 0.5em;
+}
+
+.displaylink{
+    text-decoration: none ;
+}
+  
+.desisto{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+
+#corpoform{
+    background-color: rgba(22, 22, 73, 0.438);
+    border-radius: 15px;
+    width: 18em;
+}
+
+.texto{
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    text-align: left;
+    padding: 0.5em;
+}
+
+#card{
+    border: none;
+}
+
+#card h1{
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+}
+
+.imagem {
+    box-sizing: border-box;
+    border: 0.1em solid white;
+    height: 10em;
+    width: fit-content;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+}
+
+.imagem img {
+    object-fit: cover;
+    height: 10em;
+}
+
+.praga{
+    width: fit-content;
+    padding: 0;
+}

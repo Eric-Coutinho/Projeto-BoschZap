@@ -126,3 +126,9 @@ h2{
     justify-content: center;
     margin-top: 1.5em;
 }
+
+#corpoform{
+    background-color: rgba(22, 22, 73, 0.438);
+    border-radius: 15px;
+    width: 18em;
+}
