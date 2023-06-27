@@ -32,8 +32,13 @@ main {
 }
 
 .logo {
-    width: auto;
+    width: 12em;
+    height: auto;
     margin-top: 0.17em;
+}
+
+.logo img {
+    object-fit: cover;
 }
 
 h2 {
@@ -44,51 +49,36 @@ h2 {
 
 .displaylink {
     text-decoration: none;
-    color: white;
+    color: azure;
 }
-
-/* .barra {
-    background-color: gray;
-    margin-top: 5em;
-    border-radius: 10px;
-    height: 50em;
-    width: 10em;
-    margin: 0;
-} */
 
 .sidebar {
     margin: 0;
     padding: 0;
-    width: 9.25em;
-    background-color: #f1f1f1;
+    background-color: transparent;
     position: fixed;
-    height: 100vh;
 }
 
 .sidebar a {
     display: block;
-    color:black;
+    color: black;
     padding-inline: 0;
     text-decoration: none;
     width: 100%;
     padding-block: 1em;
 }
 
-
-
 .logo {
     margin: 0;
     padding-inline: 0;
-}
-
-.sidebar a.active {
-    background-color: #04AA6D;
-    color: white;
+    display: flex;
+    justify-content: center;
 }
 
 .sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
+    background-color: #dbdbdb;
+    color: black;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 700px) {
@@ -108,14 +98,60 @@ h2 {
 }
 
 @media screen and (max-width: 400px) {
+
     .sidebar a {
         text-align: center;
         float: none;
     }
+
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .sidebar img {
     width: 8em;
     height: 2em;
+}
+
+.grupo {
+    background-color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin-block: 0.5em;
+    height: 4.5em;
+}
+
+.imggrupo {
+    border-radius: 50%;
+    height: auto;
+    overflow: hidden;
+    justify-content: center;
+    margin-right: 2.8em;
+    margin-left: 0.5em;
+}
+
+.imggrupo img {
+    object-fit: cover;
+    border: 3px solid black;
+    width: 4em;
+    height: 4em;
+}
+
+
+.mensagens {
+    display: flex;
+    justify-content: space-between;
+    background-color: wheat;
+    height: 100vh;
+    width: auto;
+    box-sizing: border-box;
+    margin-left: 16em;
+    padding: 1em;
 }
 
