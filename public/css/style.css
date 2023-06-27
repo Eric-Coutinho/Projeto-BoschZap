@@ -78,14 +78,13 @@
 
 
 body {
-    background-color: rgb(18,18,58) !important;
+    background-image: url("../img/NovoProjeto.jpg") !important;
     background-size: cover;
 }
 
 html{
     font-family: 'DM Sans', sans-serif;
     background-size: cover;
-    background-color: rgb(18, 18, 50);
 }
 
 .funnav{
@@ -98,21 +97,37 @@ html{
     margin-top: 2em;
     background-color: rgba(2, 25, 153, 0.205);
     border-radius: 50px;
-}
-
-main{
-    background-size: cover;
+    position: fixed;
+    backdrop-filter: blur(2px);
+    z-index: 99999;
 }
 
 .logo{
-    width: 12em;
-    height: 12em;
-    margin: 0.17em 0 0 4em;
+    width: 10em;
+    height: 10em;
+    margin: 0 0 0 4em;
+    padding-top: 0.2em;
     opacity: 1em;
 }
 
 main {
     background-color: rgb(18, 18, 50);
+    width: auto;
+    margin-top: 0.17em;
+}
+
+.links{
+    margin-right: 3em;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.ref{
+    margin: 0 0 0 0.5em;
+    color: white;
+    font-size: 1.2em;
 }
 
 .blobinhos{
@@ -132,7 +147,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:15em 0 0 0em;
+    margin:15em 0 0 0;
     animation: blob2Animation 10s linear infinite;
 }
 
@@ -294,4 +309,68 @@ h2{
     background-color: rgba(22, 22, 73, 0.438);
     border-radius: 15px;
     width: 18em;
+}
+
+@media (max-width: 767px){
+    .blob{
+        width: 18em;
+        height: 18em;
+        margin: 5em 0 0 0;
+    }
+
+    .name{
+        font-size: 1.2em;
+        margin-right: 2em;
+        margin-left: 3em;
+        text-align: center;
+    }
+
+    .linha2{
+        flex-direction: column-reverse;
+    }
+
+    .blob2{
+        width: 18em;
+        height: 18em;
+        margin: 5em 0 0 0;
+    }
+
+    .namet2{
+        font-size: 1.2em;
+        margin-right: 2em;
+        margin-left: 3em;
+        text-align: center;
+    }
+
+    .blob3{
+        width: 18em;
+        height: 18em;
+        margin: 5em 0 0 0;
+    }
+
+    .namet3{
+        font-size: 1.2em;
+        margin-right: 2em;
+        margin-left: 3em;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 991px){
+    .blob{
+        margin: 5em 0 0 0;
+    }
+
+    .linha2{
+        flex-direction: column-reverse;
+    }
+
+    .blob2{
+        margin: 5em 0 0 0;
+    }
+
+    .blob3{
+        margin: 5em 0 0 0;
+    }
 }
