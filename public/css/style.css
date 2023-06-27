@@ -1,9 +1,90 @@
+@keyframes blob1Animation {
+    0% {
+        border-radius: 64% 36% 23% 77% / 44% 57% 43% 56% ;
+        transform: rotate(0deg);
+    }
+    25% {
+        /* Define os valores intermediários para a transição */
+        border-radius: 28% 72% 36% 64% / 74% 19% 81% 26%;
+        transform: rotate(-90deg);
+    }
+    50% {
+        /* Define os valores intermediários para a transição */
+        border-radius: 50% 50% 72% 28% / 59% 66% 34% 41% ;
+        transform: rotate(-180deg);
+    }
+    75% {
+        /* Define os valores intermediários para a transição */
+        border-radius: 53% 47% 33% 67% / 75% 15% 85% 25% ;
+        transform: rotate(-270deg);
+    }
+    100% {
+        border-radius: 64% 36% 23% 77% / 44% 57% 43% 56%;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes blob2Animation {
+    0% {
+        border-radius: 33% 67% 27% 73% / 83% 35% 65% 17%;
+        transform: rotate(0deg);
+    }
+    25% {
+        /* Define os valores intermediários para a transição */
+        border-radius: 27% 73% 43% 57% / 81% 27% 73% 19%;
+        transform: rotate(90deg);
+    }
+    50% {
+        /* Define os valores intermediários para a transição */
+        border-radius: 69% 31% 44% 56% / 19% 21% 79% 81%;
+        transform: rotate(180deg);
+    }
+    75% {
+        /* Define os valores intermediários para a transição */
+        border-radius: 74% 26% 32% 68% / 49% 44% 56% 51%;
+        transform: rotate(270deg);
+    }
+    100% {
+        border-radius: 33% 67% 27% 73% / 83% 35% 65% 17%;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes blob3Animation {
+    0% {
+        border-radius: 17% 83% 74% 26% / 74% 61% 39% 26%;
+        transform: rotate(0deg);
+    }
+    25% {
+        /* Define os valores intermediários para a transição */
+        border-radius: 50% 50% 36% 64% / 80% 21% 79% 20%;
+        transform: rotate(90deg);
+    }
+    50% {
+        /* Define os valores intermediários para a transição */
+        border-radius: 36% 64% 16% 84% / 77% 40% 60% 23%;
+        transform: rotate(180deg);
+    }
+    75% {
+        /* Define os valores intermediários para a transição */
+        border-radius: 58% 42% 72% 28% / 41% 43% 57% 59% ;
+        transform: rotate(270deg);
+    }
+    100% {
+        border-radius: 17% 83% 74% 26% / 74% 61% 39% 26%;
+        transform: rotate(360deg);
+    }
+}
+
+
 body {
-    background-color: rgb(18, 18, 50) !important;
+    background-color: rgb(18,18,58) !important;
+    background-size: cover;
 }
 
 html{
     font-family: 'DM Sans', sans-serif;
+    background-size: cover;
     background-color: rgb(18, 18, 50);
 }
 
@@ -12,20 +93,23 @@ html{
 }
 
 .navzin{
-    width: 85%;
-    height: 4em;
+    width: 95%;
+    height: 5em;
     margin-top: 2em;
-    background-color: aliceblue;
-    opacity : 0.5;
-    position: fixed;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
+    background-color: rgba(2, 25, 153, 0.205);
+    border-radius: 50px;
 }
 
 main{
-    background-color: rgb(18, 18,50)
+    background-size: cover;
 }
 
+.logo{
+    width: 12em;
+    height: 12em;
+    margin: 0.17em 0 0 4em;
+    opacity: 1em;
+}
 
 main {
     background-color: rgb(18, 18, 50);
@@ -45,37 +129,121 @@ main {
 }
 
 .blob {
-    width: 20em;
-    height: 20em;
+    width: 22em;
+    height: 22em;
     background: rgb(195,96,34);
     background: linear-gradient(0deg, rgba(195,96,34,1) 0%, rgba(192,81,62,1) 44%, rgba(253,45,45,1) 100%);
-    border-radius: 69% 31% 44% 56% / 19% 21% 79% 81% ;
+    border-radius: 69% 31% 44% 56% / 19% 21% 79% 81%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:2em 0 0 5em;
+    margin:15em 0 0 0em;
+    animation: blob2Animation 10s linear infinite;
 }
 
+.divajusblob{
+    display: flex;
+    justify-content: center;
+}
+
+.name1{
+    animation: blob1Animation 10s linear infinite;
+}
+
+.blobtext {
+    width: 45em;
+    height: 45em;
+    background: rgb(195,96,34);
+    background: linear-gradient(0deg, rgba(195,96,34,1) 0%, rgba(192,81,62,1) 44%, rgba(253,45,45,1) 100%);
+    border-radius: 23% 77% 17% 83% / 80% 24% 76% 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:4em 0 0 0;
+    overflow: hidden;
+}
+
+.name{
+    font-size: 1.7em;
+    margin-right: 2em;
+    margin-left: 3em;
+    text-align: center;
+}
+
+
 .blob2 {
-    width: 20em;
-    height: 20em;
+    width: 22em;
+    height: 22em;
     border-radius: 33% 67% 27% 73% / 83% 35% 65% 17%;
     background: rgb(0,253,255);
     background: linear-gradient(0deg, rgba(0,253,255,1) 0%, rgba(62,192,171,1) 44%, rgba(45,253,55,1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
+    margin:15em 0 0 0em;
+    animation: blob3Animation 10s linear infinite;
 }
 
+.name2{
+    animation: blob1Animation 10s linear infinite;
+}
+
+.blob2text {
+    width: 45em;
+    height: 45em;
+    background: rgb(0,253,255);
+    background: linear-gradient(0deg, rgba(0,253,255,1) 0%, rgba(62,192,171,1) 44%, rgba(45,253,55,1) 100%);
+    border-radius: 23% 77% 17% 83% / 80% 24% 76% 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:4em 0 0 0;
+    overflow: hidden;
+}
+
+.namet2{
+    font-size: 1.7em;
+    margin-right: 2em;
+    margin-left: 3em;
+    text-align: center;
+}
+
+
 .blob3 {
-    width: 20em;
-    height: 20em;
+    width: 22em;
+    height: 22em;
     border-radius: 74% 26% 32% 68% / 49% 44% 56% 51%;
     background: rgb(255,0,249);
     background: linear-gradient(0deg, rgba(255,0,249,1) 0%, rgba(171,62,192,1) 44%, rgba(51,45,253,1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
+    margin:15em 0 0 0em;
+    animation: blob1Animation 10s linear infinite;
+}
+
+.name3{
+    animation: blob2Animation 10s linear infinite;
+}
+
+.blob3text {
+    width: 45em;
+    height: 45em;
+    background: rgb(255,0,249);
+    background: linear-gradient(0deg, rgba(255,0,249,1) 0%, rgba(171,62,192,1) 44%, rgba(51,45,253,1) 100%);
+    border-radius: 23% 77% 17% 83% / 80% 24% 76% 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:4em 0 0 0;
+    overflow: hidden;
+}
+
+.namet3{
+    font-size: 1.7em;
+    margin-right: 2em;
+    margin-left: 3em;
+    text-align: center;
 }
 
 h2{
