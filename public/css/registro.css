@@ -40,6 +40,7 @@ main {
     background-color: rgba(22, 22, 73, 0.438);
     border-radius: 15px;
     width: fit-content;
+    height: 45em;
 }
 
 #linhaform {
@@ -123,4 +124,10 @@ main {
 .praga{
     width: fit-content;
     padding: 0;
+}
+
+.btn{
+    width: 8em;
+    margin-inline: 1em;
+
 }
