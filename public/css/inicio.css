@@ -69,7 +69,7 @@ h2 {
 }
 
 .logo {
-    margin: 0;  
+    margin: 0;
     padding-inline: 0;
     display: flex;
     justify-content: center;
@@ -92,9 +92,26 @@ h2 {
     height: 2em;
 }
 
+.barra {
+    border-right: none;
+}
+
+.mensagens {
+    border-right: none;
+}
+
+@media screen and (min-width: 990) {
+    .barra {
+        border-right: 1.5px solid white;
+    }
+    .mensagens {
+        border-left: 1.5px solid white;
+    }
+}
+
 @media screen and (max-width: 700px) {
-    
-    .barra{
+
+    .barra {
         width: 100%;
     }
 
@@ -128,7 +145,7 @@ h2 {
 
 }
 
-.grupo {
+.grupos {
     background-color: aliceblue;
     border-radius: 5px;
     border: 1px solid black;
@@ -136,6 +153,8 @@ h2 {
     justify-content: space-between;
     margin-block: 0.5em;
     height: 4.5em;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
 }
 
 .imggrupo {
@@ -154,13 +173,94 @@ h2 {
     height: 4em;
 }
 
+.infogrupo {
+    padding: 0.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+}
+
+.fotogrupo {
+    border-radius: 50%;
+    height: auto;
+    overflow: hidden;
+    justify-content: center;
+    margin-right: 2.8em;
+    margin-left: 0.5em;
+}
+
+.fotogrupo img {
+    object-fit: cover;
+    border: 3px solid black;
+    width: 4em;
+    height: 4em;
+}
 
 .mensagens {
     display: flex;
     justify-content: space-between;
-    background-color: wheat;
+    background-color: rgb(22, 22, 61);
     height: 100vh;
     box-sizing: border-box;
-    padding: 1em;
+    padding: 0.7em;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
 }
 
+.corpomsg{
+    padding: 1em;
+    padding-bottom: 0;
+}
+
+.corpomsg2{
+    padding: 1em;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: end;
+}
+
+.balao{
+    background-color: rgb(39, 39, 102);
+    padding: 1em;
+    border-radius: 5px;
+    padding-inline: 0;
+}
+
+.nomealuno{
+    font-size: 0.8em;
+    margin-left: 0.4em;
+}
+
+.balao hr{
+    margin: 0.2em;
+}
+
+.txtmensagem{
+    padding: 0.5em;
+    padding-inline: 0;
+    margin-inline: 0.4em;
+}
+
+.balao2{
+    background-color: rgb(39, 82, 102);
+    padding: 1em;
+    border-radius: 5px;
+    padding-inline: 0;
+    width: auto;
+}
+
+.balao2 hr{
+    margin: 0.2em;
+}
+
+.digitar {
+    background-color: rgba(41, 17, 80, 0.623);
+    padding: 1em;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 10px;
+    
+}
