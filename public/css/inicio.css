@@ -55,8 +55,9 @@ h2 {
 
 .sidebar {
     margin: 0;
-    padding: 0;
+    padding: 0.5em;
     background-color: transparent;
+    margin-top: 0.2em;
 }
 
 .sidebar a {
@@ -76,7 +77,7 @@ h2 {
 }
 
 .sidebar a:hover:not(.active) {
-    background-color: #dbdbdb;
+    background-color: #2e2f69;
     color: black;
     border-radius: 5px;
 }
@@ -104,6 +105,7 @@ h2 {
     .barra {
         border-right: 1.5px solid white;
     }
+
     .mensagens {
         border-left: 1.5px solid white;
     }
@@ -210,41 +212,41 @@ h2 {
     color: white;
 }
 
-.corpomsg{
+.corpomsg {
     padding: 1em;
     padding-bottom: 0;
 }
 
-.corpomsg2{
+.corpomsg2 {
     padding: 1em;
     padding-bottom: 0;
     display: flex;
     justify-content: end;
 }
 
-.balao{
+.balao {
     background-color: rgb(39, 39, 102);
     padding: 1em;
     border-radius: 5px;
     padding-inline: 0;
 }
 
-.nomealuno{
+.nomealuno {
     font-size: 0.8em;
     margin-left: 0.4em;
 }
 
-.balao hr{
+.balao hr {
     margin: 0.2em;
 }
 
-.txtmensagem{
+.txtmensagem {
     padding: 0.5em;
     padding-inline: 0;
     margin-inline: 0.4em;
 }
 
-.balao2{
+.balao2 {
     background-color: rgb(39, 82, 102);
     padding: 1em;
     border-radius: 5px;
@@ -252,15 +254,40 @@ h2 {
     width: auto;
 }
 
-.balao2 hr{
+.balao2 hr {
     margin: 0.2em;
 }
 
 .digitar {
-    background-color: rgba(163, 143, 196, 0.623);
+    background-color: rgba(118, 91, 182, 0.623);
     padding: 1em;
     display: flex;
     justify-content: flex-start;
     border-radius: 10px;
-    
+}
+
+.botãoSidebar {
+    background-color: rgb(90, 70, 136);
+    margin: 0;
+    margin-block: 0.5em;
+}
+
+.caixatexto {
+    flex-grow: 1;
+}
+
+@media (max-width: 767px) {
+    .mensagens {
+        height: calc(100vh - 3em);
+    }
+}
+
+@media (min-width: 768px) {
+    .digitar {
+        position: sticky;
+        bottom: 0;
+        margin-bottom: 1.5em;
+        width: 80%;
+        margin-right: 1.6em;
+    }
 }
