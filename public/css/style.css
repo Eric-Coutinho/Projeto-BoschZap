@@ -95,6 +95,10 @@ nav{
     position: fixed !important;
 }
 
+.navbar-nav {
+    flex-direction:row !important;
+}
+
 .linklogo{
     margin-left: 3em;
 }
@@ -347,6 +351,8 @@ h2{
 #formulario {
     width: 75%;
     background-color: transparent;
+    border-color: transparent;
+    margin-top: 3em;
 }
 
 #linhaform {
@@ -355,10 +361,15 @@ h2{
     margin-top: 5em;
 }
 
+.logogform{
+    width: 15em;
+    margin-bottom: 3em;
+}
+
 .botao {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 .botao2 {
@@ -372,25 +383,42 @@ h2{
     padding: 1em;
     width: 75%;
     font-family: 'DM Sans', sans-serif;
+    border-radius: 50px;
+	border: none;
+    text-transform: uppercase;
+    background: rgb(12,4,157);
+    background: linear-gradient(90deg, rgba(12,4,157,1) 0%, rgba(43,8,167,1) 15%, rgba(37,0,131,1) 32%, rgba(91,0,194,1) 53%, rgba(173,0,255,1) 76%, rgba(179,0,255,1) 100%);
+	cursor: pointer;
 }
-.link{
-    margin-bottom: 0.5em;
+
+.form-floating .login{
+    margin: 0 0 0 3.1em;
+    width: 80%;
+    border: none;
+    border-radius: 50px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.form-floating .link{
+    margin: 2em 0 0 3.1em;
+    width: 80%;
+    border: none;
+    border-radius: 50px;
+}
+
+label{
+    margin: 0 0 0 3.1em;
 }
 
 .displaylink{
     text-decoration: none ;
+    margin: 0.5em 0 0.5em 0;
 }
   
 .desisto{
     display: flex;
     justify-content: center;
     margin-top: 1.5em;
-}
-
-#corpoform{
-    background-color: rgba(22, 22, 73, 0.438);
-    border-radius: 15px;
-    width: 18em;
 }
 
 .linha4 .textlogin{
@@ -409,8 +437,12 @@ h2{
     align-items: center;
     margin:4em 0 5em 0;
     overflow: hidden;
-
 }
+
+.displaylink{
+    color: white;
+}
+
 
 @media (max-width: 767px){
     .blob{
@@ -458,6 +490,18 @@ h2{
 
     .textlogin h2{
         text-align: center;
+    }
+
+    .form-floating .login{
+        margin: 0 0 0 2.0em;
+    }
+    
+    .form-floating .link{
+        margin: 1em 0 0 2.0em;
+    }
+    
+    label{
+        margin: 0 0 0 2.0em;
     }
 
 }
