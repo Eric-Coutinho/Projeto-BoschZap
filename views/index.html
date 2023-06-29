@@ -26,26 +26,6 @@
 </head>
 
 <body>
-    <!-- <div class="container-fluid d-flex justify-content-center funnav">
-      <div class="navzin shadow-lg d-flex align-items-center justify-content-between shadow-lg">
-        <img class="logo" src="../public/img/BOSCH.png" alt="">
-        <div class="links d-flex">
-          <a href="">
-            <h2 class="ref">GRUPOS</h2>
-          </a>
-          <a href="">
-            <h2 class="ref">CHAT</h2>
-          </a>
-          <a href="">
-            <h2 class="ref">SUGESTÕES</h2>
-          </a>
-          <a href="#">
-            <h2 class="ref">LOGIN</h2>
-          </a>
-        </div>
-      </div>
-    </div> -->
-
     <header class="d-flex justify-content-center">
       <nav class="navbar navbar-expand-sm shadow-lg">
         <div class="container-fluid">
@@ -132,7 +112,33 @@
               </div>
               <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
                 <div class="bloblogin shadow">
-              </div>
+                  <div class="card formulario" id="formulario">
+                    <div class="card-body" id="corpoform">
+                      <div class="d-flex justify-content-center">
+                        <img class="logogform" src="../public/img/BOSCH.png" alt="">
+                      </div>
+                      <form action="post">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control login" id="floatingInput" placeholder="Usuário">
+                            <label for="floatingInput">Usuário</label>
+                          </div>
+                        <div class="form-floating">
+                          <input type="password" class="form-control link" id="floatingPassword" placeholder="Senha">
+                          <label for="floatingPassword">Senha</label>
+                          <div class="d-flex justify-content-center">
+                            <a href="recurera.html" class="displaylink">Esqueceu a Senha?</a>
+                          </div>
+                          </div>
+                        <div class="botao">
+                          <button type="button" class="btn btn-primary btn-sm" id="botoes">Login</button>
+                        </div>
+                      </form>
+                      <div class="botao2">
+                        <a href="registro.html" class="displaylink">Crie uma conta</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
         </div>
