@@ -105,6 +105,15 @@ h2 {
     color: black;
 }
 
+.reczap{
+    width: 15em;
+    margin-top: 3em;
+}
+
+.reco{
+    margin-bottom: 1em;
+}
+
 @media screen and (min-width: 990) {
     .barra {
         border-right: 1.5px solid white;
@@ -133,6 +142,15 @@ h2 {
 
     div.content {
         margin-left: 0;
+    }
+
+    .reco{
+        margin-bottom: 2em;
+    }
+
+    .reczap{
+        width: 13em;
+        margin-top: 1em;
     }
 }
 
