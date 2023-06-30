@@ -9,18 +9,20 @@ body {
 
 nav{
     width: 95%;
-    height: 6em;
-    margin-top: 0.5em;
+    height: 4.5em;
+    margin-top: 2em;
     background-color: rgba(2, 25, 153, 0.205);
     border-radius: 50px;
     backdrop-filter: blur(2px);
     z-index: 99999;
+}
 
+.navbar-nav {
+    flex-direction:row !important;
 }
 
 .logo{
-    width: 8em;
-    height: 1.8em;
+    width: 7em;
     padding-top: 0.2em;
     opacity: 1em;
 }
@@ -120,6 +122,22 @@ main{
 }
 
 .btn{
+    border: 0;
+    background: rgb(51,0,255);
+    background: linear-gradient(0deg, rgba(51,0,255,1) 0%, rgba(0,31,255,1) 9%, rgba(0,30,218,1) 17%, rgba(12,50,173,1) 30%, rgba(2,67,162,1) 35%, rgba(8,158,201,1) 60%, rgba(8,170,143,1) 76%, rgba(0,255,222,1) 100%);
     width: 8em;
     margin-inline: 1em;
+    margin: 1em;
+}
+
+.col-form-label{
+    padding: 0 !important;
+}
+
+.form-label{
+    margin: 0 !important;
+}
+
+h1{
+    margin-bottom: 0.5em !important;
 }
