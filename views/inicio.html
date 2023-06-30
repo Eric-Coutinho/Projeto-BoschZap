@@ -44,6 +44,35 @@
                 margin-right: 1.15em;
             }
         }
+
+        .cardrecomend-btn {
+            display: none;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 5px;
+            padding: 0.5em 1em;
+            margin: 0.5em;
+            font-family: 'DM Sans', sans-serif;
+            color: black;
+        }
+
+        /* Estilos para dispositivos móveis */
+        @media (max-width: 767px) {
+            .recomendacao {
+                margin-top: 0;
+                /* Remova a margem superior */
+            }
+
+            .cardrecomend-btn {
+                display: block;
+                /* Mostra o botão apenas em dispositivos móveis */
+            }
+
+            .cardrecomend {
+                display: none;
+                /* Esconde o cardrecomend em dispositivos móveis */
+            }
+        }
     </style>
 </head>
 
@@ -73,7 +102,6 @@
                                             Grupo1
                                         </a>
                                     </div>
-
                                     <div class="grupo">
                                         <a href="" class="displaylink grupos">
                                             <div class="imggrupo">
@@ -90,72 +118,98 @@
                                             Grupo3
                                         </a>
                                     </div>
+                                    <div class="grupo">
+                                        <div class="displaylink botao">
+                                            <div class="botao">
+                                                <button class="botao-novo-grupo">Novo Grupo</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="container-fluid">
-                            <div class="recomendacao">
-
-                            </div>
+                            <a href="recomendacao.html" style="text-decoration: none; color: black;">
+                                <div class="recomendacao">
+                                    <div class="recomendacao-btn">
+                                        <div class="recomendtitle"
+                                            style="display: flex; justify-content: center; font-family: 'DM Sans', sans-serif; color: black;">
+                                            RecZaps
+                                        </div>
+                                    </div>
+                                    <div class="collapsegrupo" id="collapsegrupo">
+                                        <div class="cardrecomend">
+                                            <div class="recomendtitle">Vídeo pika</div>
+                                            <div class="recomendtext">Lorem ipsum dolor, sit amet consectetur
+                                                adipisicing elit. Ab reiciendis asperiores mollitia. Dolores accusamus
+                                                quidem quisquam rerum voluptatibus aliquam sequi incidunt, maxime minima
+                                                consequatur! Eius quos maxime doloribus eaque ex. Lorem ipsum dolor sit
+                                                amet consectetur, adipisicing elit. Optio praesentium, corporis
+                                                voluptate eius ratione cupiditate. Minima minus distinctio nam, corporis
+                                                iste eaque odit hic eos, praesentium iusto quia quod quisquam!</div>
+                                        </div>
+                                    </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-9 col-xl-10 col-md-12 mensagens">
-                    <div class="container fluid" style="height: 80vh;">
-                        <div class="row">
-                            <div class="col">
-                                <div class="infogrupo">
-                                    <div class="fotogrupo">
-                                        <img src="../public/img/sherek.jpg" alt="Foto padrão grupo">
-                                    </div>
-                                    Grupo 1
+            </div>
+            <div class="col-lg-9 col-xl-10 col-md-12 mensagens">
+                <div class="container fluid" style="height: 80vh;">
+                    <div class="row">
+                        <div class="col">
+                            <div class="infogrupo">
+                                <div class="fotogrupo">
+                                    <img src="../public/img/sherek.jpg" alt="Foto padrão grupo">
                                 </div>
-                                <hr style="margin-block: 0.1em;">
+                                Grupo 1
                             </div>
+                            <hr style="margin-block: 0.1em;">
                         </div>
-                        <div class="row">
-                            <div class="container corpomsg">
-                                <div class="col-md-5">
-                                    <div class="balao" style="width:85%;">
-                                        <div class="container">
-                                            <div class="row nomealuno">
-                                                Nome aluno
-                                            </div>
-                                            <hr>
-                                            <div class="row txtmensagem">Teste Mensagem</div>
+                    </div>
+                    <div class="row">
+                        <div class="container corpomsg">
+                            <div class="col-md-5">
+                                <div class="balao" style="width:85%;">
+                                    <div class="container">
+                                        <div class="row nomealuno">
+                                            Nome aluno
                                         </div>
+                                        <hr>
+                                        <div class="row txtmensagem">Teste Mensagem</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="container corpomsg2">
-                                <div class="col-md-5" style="display: flex; justify-content: end;">
-                                    <div class="balao2" style="width:85%;">
-                                        <div class="container">
-                                            <div class="row nomealuno">
-                                                Nome aluno 2
-                                            </div>
-                                            <hr>
-                                            <div class="row txtmensagem">Teste Mensagem 2</div>
+                    </div>
+                    <div class="row">
+                        <div class="container corpomsg2">
+                            <div class="col-md-5" style="display: flex; justify-content: end;">
+                                <div class="balao2" style="width:85%;">
+                                    <div class="container">
+                                        <div class="row nomealuno">
+                                            Nome aluno 2
                                         </div>
+                                        <hr>
+                                        <div class="row txtmensagem">Teste Mensagem 2</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="container digitar fixed-bottom">
-                                <div class="caixatexto" style="width: 100%;">
-                                    <textarea class="txtmensagem" placeholder="Mensagem" name="mensagem"
-                                        style="background-color: transparent; color: white; border: 0; width: 100%; overflow-wrap: break-word; height: auto; resize: none;"></textarea>
-                                </div>
+                    </div>
+                    <div class="row">
+                        <div class="container digitar fixed-bottom">
+                            <div class="caixatexto" style="width: 100%;">
+                                <textarea class="txtmensagem" placeholder="Mensagem" name="mensagem"
+                                    style="background-color: transparent; color: white; border: 0; width: 100%; overflow-wrap: break-word; height: auto; resize: none;"></textarea>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </main>
 

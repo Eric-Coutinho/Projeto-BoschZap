@@ -76,8 +76,14 @@ h2 {
     justify-content: center;
 }
 
-.sidebar a:hover:not(.active) {
+.sidebar a.logo:hover{
     background-color: #2e2f69;
+    color: black;
+    border-radius: 5px;
+}
+
+.sidebar a:hover{
+    background-color: #406886;
     color: black;
     border-radius: 5px;
 }
@@ -145,6 +151,78 @@ h2 {
         float: none;
     }
 
+}
+
+.botao-novo-grupo {
+    border-radius: 5px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5em;
+    width: 7em;
+    font-family: 'DM Sans', sans-serif;
+    color: black;
+}
+
+.botao{
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    margin-block: 0.5em;
+    height: 4.5em;
+    font-family: 'DM Sans', sans-serif;
+    color: black;
+}
+
+.recomendacao {
+    background-color: white;
+    padding-inline: 0.4em;
+    border-radius: 10px;
+    padding-block: 0.01em;
+    height: auto;
+    max-height: 19em; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardrecomend {
+    padding-inline: 0.5em;
+    background-color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: flex;
+    margin-bottom: 0.5em;
+    font-family: 'DM Sans', sans-serif;
+    color: black;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    max-height: 15.7em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.recomendtext {
+    width: 100%;
+    max-height: 100%;
+    margin-block: 0.3em;
+}
+
+.recomendtitle {
+    margin-top: 0.3em;
+}
+
+.recomendacao-btn {
+    background-color: white;
+    border-radius: 10px;
+    /* padding: 1em; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .grupos {

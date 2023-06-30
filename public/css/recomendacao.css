@@ -76,8 +76,14 @@ h2 {
     justify-content: center;
 }
 
-.sidebar a:hover:not(.active) {
-    background-color: #ee0000;
+.sidebar a.logo:hover{
+    background-color: #2e2f69;
+    color: black;
+    border-radius: 5px;
+}
+
+.sidebar a:hover{
+    background-color: #406886;
     color: black;
     border-radius: 5px;
 }
