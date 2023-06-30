@@ -1,0 +1,297 @@
+body {
+    background-color: rgb(18, 18, 50) !important;
+}
+
+html {
+    font-family: 'DM Sans', sans-serif;
+    background-color: rgb(18, 18, 50);
+}
+
+.funnav {
+    height: 5.5em;
+}
+
+.navzin {
+    width: 85%;
+    height: 4em;
+    margin-top: 2em;
+    background-color: aliceblue;
+    opacity: 0.5;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+main {
+    background-color: rgb(18, 18, 50)
+}
+
+
+main {
+    background-color: rgb(18, 18, 50);
+}
+
+.logo {
+    width: 12em;
+    height: auto;
+    margin-top: 0.17em;
+}
+
+
+.logo img {
+    object-fit: cover;
+}
+
+h2 {
+    font-family: 'Geologica', sans-serif;
+    font-family: 'Lekton', sans-serif;
+    font-family: 'Lexend Peta', sans-serif;
+}
+
+.displaylink {
+    text-decoration: none;
+    color: azure;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0.5em;
+    background-color: transparent;
+    margin-top: 0.2em;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding-inline: 0;
+    text-decoration: none;
+    width: 100%;
+    padding-block: 1em;
+}
+
+.logo {
+    margin: 0;
+    padding-inline: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #ee0000;
+    color: black;
+    border-radius: 5px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sidebar img {
+    width: 8em;
+    height: 2em;
+}
+
+.barra {
+    border-right: none;
+}
+
+.mensagens {
+    border-right: none;
+}
+
+.moda{
+    color: black;
+}
+
+@media screen and (min-width: 990) {
+    .barra {
+        border-right: 1.5px solid white;
+    }
+
+    .mensagens {
+        border-left: 1.5px solid white;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .barra {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a {
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+
+}
+
+.grupos {
+    background-color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin-block: 0.5em;
+    height: 4.5em;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+}
+
+.imggrupo {
+    border-radius: 50%;
+    height: auto;
+    overflow: hidden;
+    justify-content: center;
+    margin-right: 2.8em;
+    margin-left: 0.5em;
+}
+
+.imggrupo img {
+    object-fit: cover;
+    border: 3px solid black;
+    width: 4em;
+    height: 4em;
+}
+
+.infogrupo {
+    padding: 0.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+}
+
+.fotogrupo {
+    border-radius: 50%;
+    height: auto;
+    overflow: hidden;
+    justify-content: center;
+    margin-right: 2.8em;
+    margin-left: 0.5em;
+}
+
+.fotogrupo img {
+    object-fit: cover;
+    border: 3px solid black;
+    width: 4em;
+    height: 4em;
+}
+
+.mensagens {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(22, 22, 61);
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 0.7em;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+}
+
+.corpomsg {
+    padding: 1em;
+    padding-bottom: 0;
+}
+
+.corpomsg2 {
+    padding: 1em;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: end;
+}
+
+.balao {
+    background-color: rgb(39, 39, 102);
+    padding: 1em;
+    border-radius: 5px;
+    padding-inline: 0;
+}
+
+.nomealuno {
+    font-size: 0.8em;
+    margin-left: 0.4em;
+}
+
+.balao hr {
+    margin: 0.2em;
+}
+
+.txtmensagem {
+    padding: 0.5em;
+    padding-inline: 0;
+    margin-inline: 0.4em;
+}
+
+.balao2 {
+    background-color: rgb(39, 82, 102);
+    padding: 1em;
+    border-radius: 5px;
+    padding-inline: 0;
+    width: auto;
+}
+
+.balao2 hr {
+    margin: 0.2em;
+}
+
+.digitar {
+    background-color: rgba(118, 91, 182, 0.623);
+    padding: 1em;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 10px;
+}
+
+.botãoSidebar {
+    background-color: rgb(90, 70, 136);
+    margin: 0;
+    margin-block: 0.5em;
+}
+
+.caixatexto {
+    flex-grow: 1;
+}
+
+@media (max-width: 767px) {
+    .mensagens {
+        height: calc(100vh - 3em);
+    }
+}
+
+@media (min-width: 768px) {
+    .digitar {
+        position: sticky;
+        bottom: 0;
+        margin-bottom: 1.5em;
+        width: 80%;
+        margin-right: 1.6em;
+    }
+}
