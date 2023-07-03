@@ -84,6 +84,7 @@ h2 {
 
 .sidebar a:hover{
     background-color: #406886;
+    /* transform: scale(2px, 2px); */
     color: black;
     border-radius: 5px;
 }
@@ -177,6 +178,14 @@ h2 {
     color: black;
 }
 
+.final{
+    margin-bottom: 0;
+}
+
+.botao-modal{
+    margin-top: 1em;
+}
+
 .recomendacao {
     background-color: white;
     padding-inline: 0.4em;
@@ -218,7 +227,6 @@ h2 {
 .recomendacao-btn {
     background-color: white;
     border-radius: 10px;
-    /* padding: 1em; */
     display: flex;
     justify-content: center;
     align-items: center;

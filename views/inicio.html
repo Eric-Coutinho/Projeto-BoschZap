@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BoschZap</title>
-    <link rel="stylesheet" href="../public/css/registro.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../public/css/inicio.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Geologica:wght@500&family=Lekton&family=Lexend+Peta:wght@500&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
 
     <style>
         .botãoSidebar {
@@ -56,21 +56,17 @@
             color: black;
         }
 
-        /* Estilos para dispositivos móveis */
         @media (max-width: 767px) {
             .recomendacao {
                 margin-top: 0;
-                /* Remova a margem superior */
             }
 
             .cardrecomend-btn {
                 display: block;
-                /* Mostra o botão apenas em dispositivos móveis */
             }
 
             .cardrecomend {
                 display: none;
-                /* Esconde o cardrecomend em dispositivos móveis */
             }
         }
     </style>
@@ -121,10 +117,51 @@
                                     <div class="grupo">
                                         <div class="displaylink botao">
                                             <div class="botao">
-                                                <button class="botao-novo-grupo">Novo Grupo</button>
+                                                <button type="button" class="botao-novo-grupo"
+                                                    data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                    data-bs-whatever="@mdo">Novo Grupo</button>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="modal fade" id="exampleModal" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Novo Grupo</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form>
+                                                        <div class="mb-3">
+                                                            <label for="recipient-name" class="col-form-label">Nome do Grupo</label>
+                                                            <input type="text" class="form-control" id="recipient-name">
+                                                        </div>
+                                                        <div class="mb-3 final">
+                                                            <label for="add-participante" class="col-form-label">Participantes</label>
+                                                            <select id="add-participante" class="form-control" multiple>
+                                                                <option value="Participante1">Participante1</option>
+                                                                <option value="Participante2">Participante2</option>
+                                                                <option value="Participante3">Participante3</option>
+                                                                <option value="Participante3">Participante3</option>
+                                                                <option value="Participante3">Participante3</option>
+                                                                <option value="Participante3">Participante3</option>
+                                                                <option value="Participante3">Participante3</option>
+                                                                <option value="Participante3">Participante3</option>
+                                                                <option value="Participante3">Participante3</option>
+                                                                <option value="Participante3">Participante3</option>
+                                                                <!-- Adicione mais opções de participantes conforme necessário -->
+                                                            </select>
+                                                            <button type="button" class="btn btn-primary botao-modal" id="criar-grupo-btn">Criar</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -215,6 +252,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../public/js/inicio.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
