@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoschZap</title>
+    <link rel="stylesheet" href="../css/recomendacao.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geologica:wght@500&family=Lekton&family=Lexend+Peta:wght@500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .botãoSidebar {
+            background-color: white;
+            margin: 0;
+            margin-block: 0.5em;
+        }
+
+        @media (max-width: 767px) {
+            .row .digitar {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                margin-bottom: 1.5em;
+                max-width: 100%;
+                width: 90%;
+
+            }
+        }
+
+        @media (min-width: 768px) {
+            .digitar {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                margin-bottom: 1.5em;
+                max-width: 100%;
+                width: 81%;
+                margin-right: 1.15em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-xl-2 col-md-12 barra">
+                    <div class="row">
+                        <div class="sidebar">
+                            <a href="index.html" class="logo" style="display: flex; justify-content: center;">
+                                <img src="../img/BOSCH.png" alt="Logo BoschZap"
+                                    style="width: auto; height: 2em;">
+                            </a>
+                            <div class="escondegrupo">
+                                <a class="btn botãoSidebar d-lg-none" data-bs-toggle="collapse" href="#collapsegrupo"
+                                    role="button" aria-expanded="false" aria-controls="collapsegrupo"
+                                    style="display: flex; justify-content: center; color: white; background-color: rgb(90, 70, 136);">
+                                    Grupos
+                                </a>
+                                <div class="d-lg-block collapse" id="collapsegrupo">
+                                    <div class="grupo">
+                                        <a href="/inicio" class="displaylink grupos">
+                                            <div class="imggrupo">
+                                                <img src="../img/sherek.jpg" alt="Foto padrão grupo">
+                                            </div>
+                                            Grupo1
+                                        </a>
+                                    </div>
+
+                                    <div class="grupo">
+                                        <a href="/inicio" class="displaylink grupos">
+                                            <div class="imggrupo">
+                                                <img src="../img/sherek.jpg" alt="Foto padrão grupo">
+                                            </div>
+                                            Grupo2
+                                        </a>
+                                    </div>
+                                    <div class="grupo">
+                                        <a href="/inicio" class="displaylink grupos">
+                                            <div class="imggrupo">
+                                                <img src="../img/sherek.jpg" alt="Foto padrão grupo">
+                                            </div>
+                                            Grupo3
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="container-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-xl-10 col-md-12 mensagens" style="height: auto;">
+                    <div class="container text-center">
+                        <div class="row">
+                            <div>
+                                <img src="../img/REC.png" alt="" class="reczap">
+                            </div>
+                            <div class="col-lg-6 col-sm-8 col-md-6 tamcard" style="padding: 3em;">
+                                <div class="card" style="height: 16em;">
+                                    <div class="card-body"
+                                        style="display: flex; align-items: center; flex-direction: column; justify-content: center;">
+                                        <h5 class="card-title">Exemplo</h5>
+                                        <p class="card-text">Teste 123 teste.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-8 col-md-6 tamcard" style="padding: 3em;">
+                                <div class="card" style="height: 16em;">
+                                    <div class="card-body"
+                                        style="display: flex; align-items: center; flex-direction: column; justify-content: center;">
+                                        <h5 class="card-title">Exemplo</h5>
+                                        <p class="card-text">Teste 123 teste.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-8 col-md-6 tamcard" style="padding: 3em;">
+                                <div class="card" style="height: 16em;">
+                                    <div class="card-body"
+                                        style="display: flex; align-items: center; flex-direction: column; justify-content: center;">
+                                        <h5 class="card-title">Exemplo</h5>
+                                        <p class="card-text">Teste 123 teste.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-8 col-md-6 tamcard" style="padding: 3em;">
+                                <div class="card" style="height: 16em;">
+                                    <div class="card-body"
+                                        style="display: flex; align-items: center; flex-direction: column; justify-content: center;">
+                                        <h5 class="card-title">Exemplo</h5>
+                                        <p class="card-text">Teste 123 teste.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="justify-content: center">
+                                <button type="button" class="btn btn-primary reco" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap"
+                                    style="width: 10em; background: rgb(12,4,157);
+                                    background: linear-gradient(90deg, rgba(12,4,157,1) 0%, rgba(43,8,167,1) 15%, rgba(37,0,131,1) 32%, rgba(91,0,194,1) 53%, rgba(173,0,255,1) 76%, rgba(179,0,255,1) 100%); border: 0;">Adicionar
+                                    recomendação</button>
+                            </div>
+                            <div class="modal fade moda" id="exampleModal" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: black;">
+                                                Novo RecZap</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="mb-3"
+                                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                                    <label for="recipient-name" class="col-form-label">Título:</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                </div>
+                                                <div class="mb-3"
+                                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                                    <label for="message-text" class="col-form-label">RecZap:</label>
+                                                    <textarea class="form-control" id="message-text"
+                                                        style="resize: none"></textarea>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button btnenviar" class="btn btn-primary"
+                                                style="background: rgb(12,4,157) ;
+                                        background: linear-gradient(90deg, rgba(12,4,157,1) 0%, rgba(43,8,167,1) 15%, rgba(37,0,131,1) 32%, rgba(91,0,194,1) 53%, rgba(173,0,255,1) 76%, rgba(179,0,255,1) 100%); border: 0;">Enviar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/recomend.js"></script>
+</body>
+
+</html>
