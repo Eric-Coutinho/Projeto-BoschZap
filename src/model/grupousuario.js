@@ -1,10 +1,10 @@
 const Sequelize = require('sequelize');
 const database = require('../config/db');
-const usuario = require("usuario");
-const grupo = require("grupo");
+const usuario = require("./usuario");
+const grupo = require("./grupo");
 
 
-const grupousu = database.define('Grupo', {
+const grupousu = database.define('grupouser', {
 
     IDGrupoUsu: {
         type: Sequelize.INTEGER,

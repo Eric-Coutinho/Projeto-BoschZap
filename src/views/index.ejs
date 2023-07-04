@@ -117,24 +117,37 @@
                       <div class="d-flex justify-content-center">
                         <img class="logogform" src="../img/BOSCH.png" alt="">
                       </div>
-                      <form action="post">
+                      <form method="post">
+                        <% if (ppp !== 1) { %>
                           <div class="form-floating mb-3">
-                            <input type="text" class="form-control login" id="floatingInput" placeholder="Usuário">
+                            <input type="text" class="form-control login" id="floatingInput" placeholder="Nome" name="nome" required>
                             <label for="floatingInput">Usuário</label>
                           </div>
-                        <div class="form-floating">
-                          <input type="password" class="form-control link" id="floatingPassword" placeholder="Senha">
-                          <label for="floatingPassword">Senha</label>
-                          <div class="d-flex justify-content-center">
-                            <a href="recupera.html" class="displaylink">Esqueceu a Senha?</a>
-                          </div>
-                          </div>
+                          <% } else { %>
+                            <div class="form-floating mb-3">
+                              <input type="text" class="form-control login" id="floatingInput" placeholder="Nome" name="nome" required>
+                              <label for="floatingInput">Usuário Incorreto</label>
+                            </div>
+                            <% } %>
+                            
+                          <% if (pp !== 1) { %>
+                            <div class="form-floating">
+                              <input type="text" class="form-control link" id="floatingPassword" placeholder="EDV" name="edv" required>
+                              <label for="floatingPassword">EDV</label>
+                            </div>
+                          <% } else { %>
+                            <div class="form-floating">
+                              <input type="text" class="form-control link" id="floatingPassword" placeholder="EDV Incorreto" name="edv" required>
+                              <label for="floatingPassword">EDV Incorreto</label>
+                            </div>
+                          <% } %>
+                          
                         <div class="botao">
-                          <button type="button" class="btn btn-primary btn-sm" id="botoes">Login</button>
+                          <button type="submit" class="btn btn-primary btn-sm" id="botoes">Login</button>
                         </div>
                       </form>
                       <div class="botao2">
-                        <a href="registro.html" class="displaylink">Crie uma conta</a>
+                        <a href="/registro" class="displaylink">Crie uma conta</a>
                       </div>
                     </div>
                   </div>
@@ -143,6 +156,8 @@
             </div>
         </div>
     </main>
+
+    <script src="../../public/js/index.js"></script>
 </body>
 
 </html>

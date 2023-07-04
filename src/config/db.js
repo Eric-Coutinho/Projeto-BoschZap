@@ -5,3 +5,4 @@ const database = new sequelize('esquizofrenia', 'Materic', 'senhaforte123',
 });
 database.sync();
 module.exports = database;
+

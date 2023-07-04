@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const database = require('../config/db');
 
-const usuario = database.define('Aluno', {
+const usuario = database.define('usuario', {
 
     IDUsuario: {
         type: Sequelize.INTEGER,
@@ -16,7 +16,7 @@ const usuario = database.define('Aluno', {
     },
 
     Edv: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING(10),
         allowNull: false
     },
 
@@ -24,10 +24,15 @@ const usuario = database.define('Aluno', {
         type: Sequelize.INTEGER,
         allowNull: false
     },
+    
+    Turma: {
+        type: Sequelize.STRING(75),
+        allowNull: false
+    },
 
     Foto: {
         type: Sequelize.STRING(1000),
-        allowNull: false
+        allowNull: true
     }
 });
 

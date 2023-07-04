@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const database = require('../config/db');
 
-const grupo = database.define('Grupo', {
+const grupo = database.define('grupo', {
 
     IDGrupo: {
         type: Sequelize.INTEGER,
