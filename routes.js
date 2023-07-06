@@ -12,7 +12,7 @@ const recupera = require('./src/controllers/recupera');
 const registro = require('./src/controllers/registro');
 
 route.get('/', home.pagInicialGet).post('/', home.pagInicialPost);
-route.get('/inicio', inicio.pagHomeGet);
+route.get('/inicio', inicio.pagHomeGet).post('/criagrupo', inicio.createGroupPost);
 route.get('/recomendacao', recomendacao.pagRecomendGet);
 route.get('/recupera', recupera.pagRecuperaGet);
 route.get('/registro', registro.pagRegistroGet).post('/registro', registro.pagRegistroPost);

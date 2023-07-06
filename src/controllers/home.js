@@ -16,7 +16,6 @@ module.exports = {
             });
 
             if (!usuario2) {
-                // res.redirect('/#login')
                 res.render('../views/index', { pp:0, ppp: 1 });
             } else {
                 if (usuario2.Edv == edv) {

@@ -119,7 +119,8 @@
                                             <div class="botao">
                                                 <button type="button" class="botao-novo-grupo"
                                                     data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                    data-bs-whatever="@mdo">Novo Grupo</button>
+                                                    data-bs-whatever="@mdo">Novo Grupo
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -133,29 +134,21 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                                 </div>
-                                                <div class="modal-body">
-                                                    <form>
+                                                <div id = "modal" class="modal-body">
+                                                    <form action="/criagrupo" method="post">
                                                         <div class="mb-3">
                                                             <label for="recipient-name" class="col-form-label">Nome do Grupo</label>
                                                             <input type="text" class="form-control" id="recipient-name">
                                                         </div>
-                                                        <div class="mb-3 final">
-                                                            <label for="add-participante" class="col-form-label">Participantes</label>
-                                                            <select id="add-participante" class="form-control" multiple>
-                                                                <option value="Participante1">Participante1</option>
-                                                                <option value="Participante2">Participante2</option>
-                                                                <option value="Participante3">Participante3</option>
-                                                                <option value="Participante3">Participante3</option>
-                                                                <option value="Participante3">Participante3</option>
-                                                                <option value="Participante3">Participante3</option>
-                                                                <option value="Participante3">Participante3</option>
-                                                                <option value="Participante3">Participante3</option>
-                                                                <option value="Participante3">Participante3</option>
-                                                                <option value="Participante3">Participante3</option>
-                                                                <!-- Adicione mais opções de participantes conforme necessário -->
-                                                            </select>
-                                                            <button type="button" class="btn btn-primary botao-modal" id="criar-grupo-btn">Criar</button>
-                                                        </div>
+                                                            <div class="mb-3 final">
+                                                                <label for="add-participante" class="col-form-label">Participantes</label>
+                                                                <select id="add-participante" name="participantes" class="form-control" multiple>
+                                                                    <% for (var i = 0; i < participantes.length; i++) { %>
+                                                                        <option value="<%= participantes[i].IDUsuario %>"><%= participantes[i].Nome %></option>
+                                                                    <% } %>
+                                                                </select>
+                                                                <input type="submit" class="btn btn-primary botao-modal" id="criar-grupo-btn" value="Criar">
+                                                            </div>
                                                     </form>
                                                 </div>
                                             </div>
