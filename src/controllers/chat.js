@@ -3,11 +3,11 @@ const GrupoUsuarios = require("../model/grupousuario");
 const Grupo = require("../model/grupo");
 
 module.exports = {
-    async pagHomeGet(req, res){
+    async pagChatGet(req, res){
         try {
             const participantes = await Usuarios.findAll();
             const grupos = await Grupo.findAll();
-            res.render('../views/inicio', {participantes, grupos});
+            res.render('../views/chat', {participantes, grupos});
 
           } catch (err) {
             console.error('Erro ao buscar participantes:', err);

@@ -1,6 +1,7 @@
 const grupousu = require("../model/grupousuario");
 const grupo = require("../model/grupo");
 const usuario = require("../model/usuario");
+const session = require('express-session');
 
 module.exports = {
     async pagRegistroGet(req, res){
@@ -16,6 +17,8 @@ module.exports = {
             Edv: dados.edv,
             Turma: dados.turma
         });
+
+        req.session.userID = dados.id; 
 
         res.redirect('/');
      }

@@ -15,14 +15,9 @@ const grupo = database.define('grupo', {
         allowNull: false
     },
 
-    Capacidade: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-    },
-
     Foto: {
         type: Sequelize.STRING(1000),
-        allowNull: false
+        allowNull: true
     }
 });
 

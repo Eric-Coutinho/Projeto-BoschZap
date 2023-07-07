@@ -1,6 +1,7 @@
-const grupousu = require("../model/grupousuario");
-const grupo = require("../model/grupo");
-const usuario = require("../model/usuario");
+const GrupoUsuario = require("../model/grupousuario");
+const Grupo = require("../model/grupo");
+const Usuario = require("../model/usuario");
+// var session = require("express-session");
 
 module.exports = {
     async pagInicialGet(req, res) {
@@ -8,27 +9,26 @@ module.exports = {
     },
 
     async pagInicialPost(req, res) {
+        const session = req.session;
+
         const { nome, edv } = req.body;
 
         try {
-            const usuario2 = await usuario.findOne({
+            const usuario2 = await Usuario.findOne({
                 where: { nome },
             });
 
             if (!usuario2) {
-                res.render('../views/index', { pp:0, ppp: 1 });
+                res.render('../views/index', { pp: 0, ppp: 1 });
             } else {
                 if (usuario2.Edv == edv) {
+                    session.usuario2 = usuario2;
+                    session.edv = edv;
                     res.redirect('/inicio');
-                    pp = 0;
                 } else {
-                    res.render('../views/index', { pp:1, ppp:0});
+                    res.render('../views/index', { pp: 1, ppp: 0 });
                 }
-                ppp = 0;
             }
-
-
-
         }
         catch (err) {
             console.error('Erro ao buscar o usuário:', err);

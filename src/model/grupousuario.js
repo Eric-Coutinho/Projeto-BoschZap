@@ -1,38 +1,18 @@
 const Sequelize = require('sequelize');
 const database = require('../config/db');
-const usuario = require("./usuario");
-const grupo = require("./grupo");
+const Usuario = require('./usuario');
+const Grupo = require('./grupo');
 
-
-const grupousu = database.define('grupouser', {
-
-    IDGrupoUsu: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
-        allowNull: false,
-        primaryKey: true
-    },
-
-    Capacidade: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-    },
-
-    Foto: {
-        type: Sequelize.STRING(1000),
-        allowNull: false
-    }
+const GrupoUsuario = database.define('grupousuario', {
+  IDGrupoUsu: {
+    type: Sequelize.INTEGER,
+    autoIncrement: true,
+    allowNull: false,
+    primaryKey: true
+  }
 });
 
-grupousu.belongsTo(usuario, {
-    constraint: true,
-    foreignKey: 'IDUsuario'
-})
+Grupo.belongsToMany(Usuario, { through: GrupoUsuario, foreignKey: 'IDGrupo' });
+Usuario.belongsToMany(Grupo, { through: GrupoUsuario, foreignKey: 'IDUsuario' });
 
-grupousu.belongsTo(grupo, {
-    constraint: true,
-    foreignKey: 'IDGrupo'
-})
-
-
-module.exports = grupousu;
+module.exports = GrupoUsuario;
