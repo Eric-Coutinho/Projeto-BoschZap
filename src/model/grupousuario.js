@@ -12,7 +12,14 @@ const GrupoUsuario = database.define('grupousuario', {
   }
 });
 
-Grupo.belongsToMany(Usuario, { through: GrupoUsuario, foreignKey: 'IDGrupo' });
-Usuario.belongsToMany(Grupo, { through: GrupoUsuario, foreignKey: 'IDUsuario' });
+GrupoUsuario.belongsTo(Grupo, {
+  constraint: true, 
+  foreignKey: 'IDGrupo'
+});
+
+GrupoUsuario.belongsTo(Usuario, {
+  constraint: true,
+  foreignKey: 'IDUsuario'
+});
 
 module.exports = GrupoUsuario;

@@ -5,7 +5,8 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
 const app = express();
-const oneDay = 1000 * 60 * 60 * 24;
+const oneDay = 1000 * 60 * 20;
+// const oneDay = 1000;
 
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
