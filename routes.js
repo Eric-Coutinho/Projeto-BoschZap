@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const multer = require("multer");
 
 const homeController = require('./src/controllers/home');
 const inicioController = require('./src/controllers/inicio');
@@ -8,6 +9,8 @@ const recuperaController = require('./src/controllers/recupera');
 const registroController = require('./src/controllers/registro');
 const chatController = require('./src/controllers/chat');
 
+const config = require('./src/config/multer');
+const registro = require('./src/controllers/registro');
 
 const checkAuth = (req, res, next) => {
     if (!req.session.edv) {
@@ -22,5 +25,6 @@ router.get('/recomendacao', checkAuth, recomendacaoController.pagRecomendGet);
 router.get('/recupera', recuperaController.pagRecuperaGet);
 router.get('/registro', registroController.pagRegistroGet).post('/registro', registroController.pagRegistroPost);
 router.get('/chat', chatController.pagChatGet).post('/chat', chatController.createGroupPost);
+router.post('/cadastroAluno', multer(config).single('foto'), registro.pagRegistroPost);
 
 module.exports = router;

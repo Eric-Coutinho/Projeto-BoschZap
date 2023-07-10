@@ -11,11 +11,18 @@ module.exports = {
      async pagRegistroPost(req, res){
         const dados = req.body;
 
+        let foto = 'usuario.png';
+
+        if (req.file) {
+            foto = req.file.filename;
+            }
+
         await usuario.create({
             Nome: dados.nome,
             Idade: dados.idade,
             Edv: dados.edv,
-            Turma: dados.turma
+            Turma: dados.turma,
+            Foto: foto
         });
 
         req.session.userID = dados.id; 
