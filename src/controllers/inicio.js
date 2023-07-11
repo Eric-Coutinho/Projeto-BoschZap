@@ -9,7 +9,7 @@ module.exports = {
       const usuarioId = req.session.edv;
 
       const query = `
-        SELECT g.Nome AS nome_grupo
+        SELECT g.Nome AS nome_grupo, g.Foto AS foto_grupo
         FROM grupos g
         JOIN grupousuarios gu ON gu.IDGrupo = g.IDGrupo
         JOIN usuarios u ON u.IDUsuario = gu.IDUsuario
@@ -25,7 +25,7 @@ module.exports = {
         }
       });
 
-      res.render('../views/inicio', { participantes, grupos });
+      res.render('../views/inicio', { participantes, grupos: grupos, usuarioId});
 
     } catch (err) {
       console.error('Erro ao buscar participantes:', err);
@@ -36,17 +36,49 @@ module.exports = {
   async createGroupPost(req, res) {
     try {
       const { nome, participantes } = req.body;
+      const parcriador = await Usuarios.findAll();
 
-      const novoGrupo = await Grupo.create({ Nome: nome });
+      const usuarioId = req.session.edv;
+      var criador = null;
+
+      let fotogrupo = 'grupo.png';
+
+      if (req.file) {
+          fotogrupo = req.file.filename;
+      }
+      
+      const novoGrupo = await Grupo.create({ Nome: nome, Foto:fotogrupo});
 
       for (const participanteId of participantes) {
-        await GrupoUsuarios.create({ IDGrupo: novoGrupo.IDGrupo, IDUsuario: participanteId });
+        await GrupoUsuarios.create({ 
+          IDGrupo: novoGrupo.IDGrupo, 
+          IDUsuario: participanteId });
       }
+
+      for (const participanteId of parcriador){
+        if(usuarioId == participanteId.Edv){
+          criador = participanteId.IDUsuario
+          break;
+        }
+      }
+
+      console.log(criador);
+
+      await GrupoUsuarios.create({
+        IDGrupo: novoGrupo.IDGrupo,
+        IDUsuario: criador
+      })
+
 
       res.redirect('/inicio');
     } catch (err) {
       console.error('Erro ao criar grupo:', err);
       res.status(500).send('Erro ao criar grupo.');
     }
+  },
+
+  async logout(req, res) {
+    req.session.destroy(); 
+    res.redirect('/');
   }
 };

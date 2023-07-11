@@ -79,7 +79,7 @@
                 <div class="col-lg-3 col-xl-2 col-md-12 barra">
                     <div class="row">
                         <div class="sidebar">
-                            <a href="/" class="logo" style="display: flex; justify-content: center;">
+                            <a href="/logout" class="logo" style="display: flex; justify-content: center;">
                                 <img src="../img/BOSCH.png" alt="Logo BoschZap"
                                     style="width: auto; height: 2em;">
                             </a>
@@ -92,15 +92,15 @@
                                 <div class="d-lg-block collapse" id="collapsegrupo">
                                     <% for (var i = 0; i < grupos.length; i++) { %>
                                         <div class="grupo">
-                                            <a href="" class="displaylink grupos">
+                                          <a href="" class="displaylink grupos">
                                             <div class="imggrupo">
-                                                <img src="../img/sherek.jpg" alt="Foto padrão grupo">
+                                              <img src="/img/<%= grupos[i].foto_grupo %>" alt="Foto do grupo">
                                             </div>
                                             <%= grupos[i].nome_grupo %>
-                                            </a>
+                                          </a>
                                         </div>
                                     <% } %>
-                                    
+                                      
                                     <div class="grupo">
                                         <div class="displaylink botao">
                                             <div class="botao">
@@ -122,7 +122,12 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div id = "modal" class="modal-body">
-                                                    <form action="/criagrupo" method="post">
+                                                    <form action="/criagrupo" method="post" enctype="multipart/form-data">
+                                                        <div class="container imagem" id="imagem"
+                                                            style="padding: 0; width: fit-content;">
+                                                            <img src="../img/user2.png" alt="Foto padrão" id="imgFoto">
+                                                            <input type="file" id="flImage" name="fotogrupo" accept="image/*"style="display: none;"> 
+                                                        </div>
                                                         <div class="mb-3">
                                                             <label for="recipient-name" class="col-form-label">Nome do Grupo</label>
                                                             <input type="text" class="form-control" id="recipient-name" name="nome">
@@ -131,9 +136,11 @@
                                                                 <label for="add-participante" class="col-form-label">Participantes</label>
                                                                 <select id="add-participante" name="participantes" class="form-control" multiple>
                                                                     <% for (var i = 0; i < participantes.length; i++) { %>
+                                                                      <% if (participantes[i].Edv !== usuarioId) { %>
                                                                         <option value="<%= participantes[i].IDUsuario %>"><%= participantes[i].Nome %></option>
+                                                                      <% } %>
                                                                     <% } %>
-                                                                </select>
+                                                                </select>                 
                                                                 <input type="submit" class="btn btn-primary botao-modal" id="criar-grupo-btn" value="Criar">
                                                             </div>
                                                     </form>
@@ -141,7 +148,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -175,56 +181,70 @@
             </div>
             <div class="col-lg-9 col-xl-10 col-md-12 mensagens">
                 <div class="container fluid" style="height: 80vh;">
-                    <!-- <div class="row">
+                    <div class="row">
                         <div class="col">
+                            <% for (var i = 0; i < 1; i++) { %>
                             <div class="infogrupo">
                                 <div class="fotogrupo">
-                                    <img src="../img/grupo.png" alt="Foto padrão grupo">
+                                    <img src="/img/<%= grupos[i].foto_grupo %>" alt="Foto padrão grupo">
                                 </div>
-                                Grupo 1
+                                <%= grupos[i].nome_grupo %>
                             </div>
                             <hr style="margin-block: 0.1em;">
+                            <% } %>
                         </div>
                     </div>
                     <div class="row">
                         <div class="container corpomsg">
-                            <div class="col-md-5">
-                                <div class="balao" style="width:85%;">
-                                    <div class="container">
-                                        <div class="row nomealuno">
-                                            Nome aluno
-                                        </div>
-                                        <hr>
-                                        <div class="row txtmensagem">Teste Mensagem</div>
-                                    </div>
+                          <div class="col-md-5">
+                            <div class="balao" style="width:85%;">
+                              <div class="container">
+                                <div class="row nomealuno">
+                                  Nome aluno
                                 </div>
+                                <hr>
+                                <div class="row txtmensagem">
+                                  <% participantes.forEach((participante) => { %>
+                                    <%- participante.nome %>: <%- participante.mensagem %><br>
+                                  <% }) %>
+                                </div>
+                              </div>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="row">
+                      </div>
+                      
+                      <div class="row">
                         <div class="container corpomsg2">
-                            <div class="col-md-5" style="display: flex; justify-content: end;">
-                                <div class="balao2" style="width:85%;">
-                                    <div class="container">
-                                        <div class="row nomealuno">
-                                            Nome aluno 2
-                                        </div>
-                                        <hr>
-                                        <div class="row txtmensagem">Teste Mensagem 2</div>
-                                    </div>
+                          <div class="col-md-5" style="display: flex; justify-content: end;">
+                            <div class="balao2" style="width:85%;">
+                              <div class="container">
+                                <div class="row nomealuno">
+                                  Nome aluno 2
                                 </div>
+                                <hr>
+                                <div class="row txtmensagem">
+                                  <% participantes.forEach((participante) => { %>
+                                    <%- participante.nome %>: <%- participante.mensagem %><br>
+                                  <% }) %>
+                                </div>
+                              </div>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="row">
+                      </div>
+                      
+                      <div class="row">
                         <div class="container digitar fixed-bottom">
-                            <div class="caixatexto" style="width: 100%;">
+                          <div class="caixatexto" style="width: 100%;">
+                            <form action="/chat" method="post">
                                 <textarea class="txtmensagem" placeholder="Mensagem" name="mensagem"
-                                    style="background-color: transparent; color: white; border: 0; width: 100%; overflow-wrap: break-word; height: auto; resize: none;"></textarea>
-                            </div>
+                                style="background-color: transparent; color: white; border: 0; width: 100%; overflow-wrap: break-word; height: auto; resize: none;"></textarea>
+                            </form>
+                          </div>
                         </div>
-                    </div>
-                </div> -->
+                      </div>
+                </div>
             </div>
         </div>
         </div>

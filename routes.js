@@ -20,11 +20,12 @@ const checkAuth = (req, res, next) => {
   };
 
 router.get('/', homeController.pagInicialGet).post('/', homeController.pagInicialPost);
-router.get('/inicio', checkAuth, inicioController.pagHomeGet).post('/criagrupo', inicioController.createGroupPost);
+router.get('/inicio', checkAuth, inicioController.pagHomeGet).post('/criagrupo', multer(config).single('fotogrupo'), inicioController.createGroupPost);
 router.get('/recomendacao', checkAuth, recomendacaoController.pagRecomendGet);
 router.get('/recupera', recuperaController.pagRecuperaGet);
-router.get('/registro', registroController.pagRegistroGet).post('/registro', registroController.pagRegistroPost);
+router.get('/registro', registroController.pagRegistroGet);
 router.get('/chat', chatController.pagChatGet).post('/chat', chatController.createGroupPost);
 router.post('/cadastroAluno', multer(config).single('foto'), registro.pagRegistroPost);
+router.get('/logout', inicioController.logout);
 
 module.exports = router;

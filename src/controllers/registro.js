@@ -15,7 +15,7 @@ module.exports = {
 
         if (req.file) {
             foto = req.file.filename;
-            }
+        }
 
         await usuario.create({
             Nome: dados.nome,
