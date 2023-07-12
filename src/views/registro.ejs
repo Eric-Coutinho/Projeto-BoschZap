@@ -36,7 +36,7 @@
             <div class="col-6" style="display: flex;justify-content: center; width: 100%;">
                 <div class="card formulario" id="formulario"
                     style="display: flex; justify-content: center; align-items: center; width: 30em;">
-                    <form method="post">
+                    <form method="post" action="/cadastroAluno" enctype="multipart/form-data">
                         <div class="row" style="border: none;">
                             <div class="container fluid text-center" id="card" style="width: 21em;">
                                 <div class="row-md-auto">
@@ -82,7 +82,6 @@
                                             <label for="recipient-name" class="col-form-label">Turma</label>
                                         </div>
                                         <select class="form-control" id="recipient-name" id="sala" name="turma">
-                                            <!-- <option value="">Selecione uma turma</option> -->
                                             <option value="Manufatura">Manufatura</option>
                                             <option value="Manufatura">Desenvolvimento de Sistemas</option>
                                             <option value="Manufatura">Análise de dados</option>

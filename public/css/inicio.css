@@ -69,6 +69,25 @@ h2 {
     padding-block: 1em;
 }
 
+.imagem {
+    box-sizing: border-box;
+    border: 0.1em solid white;
+    height: 10em;
+    width: fit-content;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+}
+
+.modal-body .imagem img {
+    height: 10em;
+    width: 10em;
+    object-fit: cover;
+}
+
 .logo {
     margin: 0;
     padding-inline: 0;
