@@ -49,3 +49,25 @@ socket.on('chat message', (data) => {
     }
 });
 
+
+$(document).ready(function() {
+    $('.grupos').on('click', function(e) {
+      e.preventDefault();
+      
+      // Obtém o ID do grupo a partir do atributo data
+      const grupoId = $(this).data('grupo-id');
+      
+      // Realiza uma requisição AJAX para carregar as mensagens do grupo
+      $.ajax({
+        url: '/grupo/' + grupoId + '/mensagens',
+        method: 'GET',
+        success: function(response) {
+          // Processa a resposta e exibe as mensagens no chat
+          // Por exemplo, você pode atualizar o conteúdo do chat na página ou adicionar as mensagens dinamicamente
+        },
+        error: function(error) {
+          // Trata o erro, se necessário
+        }
+      });
+    });
+  });

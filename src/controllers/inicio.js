@@ -1,7 +1,7 @@
 const sequelize = require('../config/db');
-const Usuarios = require("../model/usuario");
-const GrupoUsuarios = require("../model/grupousuario");
-const Grupo = require("../model/grupo");
+const Usuarios = require('../model/usuario');
+const GrupoUsuarios = require('../model/grupousuario');
+const Grupo = require('../model/grupo');
 
 module.exports = {
   async pagHomeGet(req, res) {
@@ -25,7 +25,9 @@ module.exports = {
         }
       });
 
-      res.render('../views/inicio', { participantes, grupos: grupos, usuarioId});
+      console.log(grupos);
+
+      res.render('../views/inicio', { participantes, grupos, usuarioId });
 
     } catch (err) {
       console.error('Erro ao buscar participantes:', err);
@@ -39,25 +41,26 @@ module.exports = {
       const parcriador = await Usuarios.findAll();
 
       const usuarioId = req.session.edv;
-      var criador = null;
+      let criador = null;
 
       let fotogrupo = 'grupo.png';
 
       if (req.file) {
-          fotogrupo = req.file.filename;
+        fotogrupo = req.file.filename;
       }
-      
-      const novoGrupo = await Grupo.create({ Nome: nome, Foto:fotogrupo});
+
+      const novoGrupo = await Grupo.create({ Nome: nome, Foto: fotogrupo });
 
       for (const participanteId of participantes) {
-        await GrupoUsuarios.create({ 
-          IDGrupo: novoGrupo.IDGrupo, 
-          IDUsuario: participanteId });
+        await GrupoUsuarios.create({
+          IDGrupo: novoGrupo.IDGrupo,
+          IDUsuario: participanteId
+        });
       }
 
-      for (const participanteId of parcriador){
-        if(usuarioId == participanteId.Edv){
-          criador = participanteId.IDUsuario
+      for (const participanteId of parcriador) {
+        if (usuarioId === participanteId.Edv) {
+          criador = participanteId.IDUsuario;
           break;
         }
       }
@@ -67,8 +70,7 @@ module.exports = {
       await GrupoUsuarios.create({
         IDGrupo: novoGrupo.IDGrupo,
         IDUsuario: criador
-      })
-
+      });
 
       res.redirect('/inicio');
     } catch (err) {
@@ -78,7 +80,7 @@ module.exports = {
   },
 
   async logout(req, res) {
-    req.session.destroy(); 
+    req.session.destroy();
     res.redirect('/');
   }
 };

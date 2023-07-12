@@ -28,4 +28,12 @@ router.get('/chat', chatController.pagChatGet).post('/chat', chatController.crea
 router.post('/cadastroAluno', multer(config).single('foto'), registro.pagRegistroPost);
 router.get('/logout', inicioController.logout);
 
+router.get('/grupo/:id/mensagens', (req, res) => {
+  const grupoId = req.params.id;
+  // Lógica para carregar as mensagens do grupo específico
+  // const mensagens = ...; // Carregue as mensagens do grupo utilizando o grupoId
+  
+  res.json(mensagens);
+});
+
 module.exports = router;
