@@ -1,0 +1,143 @@
+html{
+    font-family: 'DM Sans', sans-serif;
+    background-color: rgb(18, 18, 50);
+}
+
+body {
+    background-color: rgb(18, 18, 50) !important;
+}
+
+nav{
+    width: 95%;
+    height: 4.5em;
+    margin-top: 2em;
+    background-color: rgba(2, 25, 153, 0.205);
+    border-radius: 50px;
+    backdrop-filter: blur(2px);
+    z-index: 99999;
+}
+
+.navbar-nav {
+    flex-direction:row !important;
+}
+
+.logo{
+    width: 7em;
+    padding-top: 0.2em;
+    opacity: 1em;
+}
+
+main{
+    background-color: rgb(18, 18,50)
+}
+
+#formulario {
+    background-color: rgba(22, 22, 73, 0.438);
+    border-radius: 15px;
+    width: fit-content;
+    height: 45em;
+}
+
+#linhaform {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.botao {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1em;
+}
+
+.botao2 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5em;
+    text-decoration: none ;
+}
+
+#botoes {
+    padding: 1em;
+    width: 75%;
+    font-family: 'DM Sans', sans-serif;
+}
+.link{
+    margin-bottom: 0.5em;
+}
+
+.displaylink{
+    text-decoration: none ;
+}
+  
+.desisto{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+
+#corpoform{
+    background-color: rgba(22, 22, 73, 0.438);
+    border-radius: 15px;
+    width: 18em;
+}
+
+.texto{
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    text-align: left;
+    padding: 0.5em;
+}
+
+#card{
+    border: none;
+}
+
+#card h1{
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+}
+
+.imagem {
+    box-sizing: border-box;
+    border: 0.1em solid white;
+    height: 10em;
+    width: fit-content;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+}
+
+.imagem img {
+    object-fit: cover;
+    height: 10em;
+}
+
+.praga{
+    width: fit-content;
+    padding: 0;
+}
+
+.btn{
+    border: 0;
+    background: rgb(51,0,255);
+    background: linear-gradient(0deg, rgba(51,0,255,1) 0%, rgba(0,31,255,1) 9%, rgba(0,30,218,1) 17%, rgba(12,50,173,1) 30%, rgba(2,67,162,1) 35%, rgba(8,158,201,1) 60%, rgba(8,170,143,1) 76%, rgba(0,255,222,1) 100%);
+    width: 8em;
+    margin-inline: 1em;
+    margin: 1em;
+}
+
+.col-form-label{
+    padding: 0 !important;
+}
+
+.form-label{
+    margin: 0 !important;
+}
+
+h1{
+    margin-bottom: 0.5em !important;
+}
