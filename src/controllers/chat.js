@@ -26,7 +26,7 @@ module.exports = {
         }
       });
 
-      res.render('../views/chat', { participantes, grupos, usuarioId });
+      res.render('../views/chat', { participantes: participantes, grupos: grupos, usuarioId: usuarioId });
 
     } catch (err) {
       console.error('Erro ao buscar participantes:', err);
@@ -96,8 +96,6 @@ module.exports = {
 
       socket.on('message', (grupoId, mensagem) => {
         console.log(`Nova mensagem recebida no grupo ${grupoId}: ${mensagem}`);
-        // Faça o que quiser com a mensagem recebida (exiba-a na interface do usuário, salve-a no banco de dados, etc.)
-        // Enviar a mensagem para os membros do grupo
         io.to(grupoId).emit('message', mensagem);
       });
 
@@ -105,5 +103,5 @@ module.exports = {
         console.log('Cliente desconectado');
       });
     });
-  },
+  }
 };

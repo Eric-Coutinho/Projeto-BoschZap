@@ -91,59 +91,62 @@
                 </a>
                 <div class="d-lg-block collapse" id="collapsegrupo">
                   <% for (var i=0; i < grupos.length; i++) { %>
-                  <div class="grupo">
-                    <a href="/chat/<%= grupos[i].id_grupo %>" class="displaylink grupos">
-                      <div class="imggrupo">
-                        <img src="/img/<%= grupos[i].foto_grupo %>" alt="Foto do grupo">
-                      </div>
-                      <%= grupos[i].nome_grupo %>
-                    </a>
-                  </div>
-                  <% } %>
-                  <div class="grupo">
-                    <div class="displaylink botao">
-                      <div class="botao">
-                        <button type="button" class="botao-novo-grupo" data-bs-toggle="modal"
-                          data-bs-target="#exampleModal" data-bs-whatever="@mdo">Novo Grupo</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">Novo Grupo</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="grupo">
+                      <a href="/chat/<%= grupos[i].id_grupo %>" class="displaylink grupos">
+                        <div class="imggrupo">
+                          <img src="/img/<%= grupos[i].foto_grupo %>" alt="Foto do grupo">
                         </div>
-                        <div id="modal" class="modal-body">
-                          <form action="/criagrupo" method="post" enctype="multipart/form-data">
-                            <div class="container imagem" id="imagem"
-                              style="padding: 0; width: fit-content;">
-                              <img src="../img/user2.png" alt="Foto padrão" id="imgFoto">
-                              <input type="file" id="flImage" name="fotogrupo" accept="image/*" style="display: none;">
-                            </div>
-                            <div class="mb-3">
-                              <label for="recipient-name" class="col-form-label">Nome do Grupo</label>
-                              <input type="text" class="form-control" id="recipient-name" name="nome">
-                            </div>
-                            <div class="mb-3 final">
-                              <label for="add-participante" class="col-form-label">Participantes</label>
-                              <select id="add-participante" name="participantes" class="form-control" multiple>
-                                <% for (var i=0; i < participantes.length; i++) { %>
-                                <% if (participantes[i].Edv !== usuarioId) { %>
-                                <option value="<%= participantes[i].IDUsuario %>"><%= participantes[i].Nome %></option>
-                                <% } %>
-                                <% } %>
-                              </select>
-                              <input type="submit" class="btn btn-primary botao-modal" id="criar-grupo-btn"
-                                value="Criar">
-                            </div>
-                          </form>
+                        <%= grupos[i].nome_grupo %>
+                      </a>
+                    </div>
+                    <% } %>
+                      <div class="grupo">
+                        <div class="displaylink botao">
+                          <div class="botao">
+                            <button type="button" class="botao-novo-grupo" data-bs-toggle="modal"
+                              data-bs-target="#exampleModal" data-bs-whatever="@mdo">Novo Grupo</button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Novo Grupo</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div id="modal" class="modal-body">
+                              <form action="/criagrupo" method="post" enctype="multipart/form-data">
+                                <div class="container imagem" id="imagem" style="padding: 0; width: fit-content;">
+                                  <img src="../img/user2.png" alt="Foto padrão" id="imgFoto">
+                                  <input type="file" id="flImage" name="fotogrupo" accept="image/*"
+                                    style="display: none;">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="recipient-name" class="col-form-label">Nome do Grupo</label>
+                                  <input type="text" class="form-control" id="recipient-name" name="nome">
+                                </div>
+                                <div class="mb-3 final">
+                                  <label for="add-participante" class="col-form-label">Participantes</label>
+                                  <select id="add-participante" name="participantes" class="form-control" multiple>
+                                    <% for (var i=0; i < participantes.length; i++) { %>
+                                      <% if (participantes[i].Edv !==usuarioId) { %>
+                                        <option value="<%= participantes[i].IDUsuario %>">
+                                          <%= participantes[i].Nome %>
+                                        </option>
+                                        <% } %>
+                                          <% } %>
+                                  </select>
+                                  <input type="submit" class="btn btn-primary botao-modal" id="criar-grupo-btn"
+                                    value="Criar">
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 </div>
               </div>
             </div>
@@ -162,7 +165,8 @@
                     <div class="cardrecomend">
                       <div class="recomendtitle">Vídeo pika</div>
                       <div class="recomendtext">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab reiciendis
-                        asperiores mollitia. Dolores accusamus quidem quisquam rerum voluptatibus aliquam sequi incidunt,
+                        asperiores mollitia. Dolores accusamus quidem quisquam rerum voluptatibus aliquam sequi
+                        incidunt,
                         maxime minima consequatur! Eius quos maxime doloribus eaque ex. Lorem ipsum dolor sit amet
                         consectetur, adipisicing elit. Optio praesentium, corporis voluptate eius ratione cupiditate.
                         Minima minus distinctio nam, corporis iste eaque odit hic eos, praesentium iusto quia quod
@@ -178,17 +182,17 @@
         <div class="container fluid" style="height: 80vh;">
           <div class="row">
             <div class="col">
-              <% if (grupos && grupos.length > 0) { %>
-              <% for (var i = 0; i < 1; i++) { %>
-              <div class="infogrupo">
-                <div class="fotogrupo">
-                  <img src="/img/<%= grupos[i].foto_grupo %>" alt="Foto padrão grupo">
-                </div>
-                <%= grupos[i].nome_grupo %>
-              </div>
-              <hr style="margin-block: 0.1em;">
-              <% } %>
-              <% } %>
+              <% if (grupos && grupos.length> 0) { %>
+                <% for (var i=0; i < 1; i++) { %>
+                  <div class="infogrupo">
+                    <div class="fotogrupo">
+                      <img src="/img/<%= grupos[i].foto_grupo %>" alt="Foto padrão grupo">
+                    </div>
+                    <%= grupos[i].nome_grupo %>
+                  </div>
+                  <hr style="margin-block: 0.1em;">
+                  <% } %>
+                    <% } %>
             </div>
           </div>
           <div class="row">
@@ -213,9 +217,10 @@
             <div class="container digitar fixed-bottom">
               <div class="caixatexto" style="width: 100%;">
                 <form>
-                    <input class="txtmensagem" placeholder="Mensagem" name="mensagem" type="text" style="background-color: transparent; color: white; border: 0; width: 100%; overflow-wrap: break-word; height: auto; resize: none;">
-                    <button type="button" onclick="enviarMensagem(event)">Enviar</button>
-                </form>                  
+                  <input class="txtmensagem" placeholder="Mensagem" name="mensagem" type="text"
+                    style="background-color: transparent; color: white; border: 0; width: 100%; overflow-wrap: break-word; height: auto; resize: none;">
+                  <button type="button" onclick="enviarMensagem(event)">Enviar</button>
+                </form>
               </div>
             </div>
           </div>
@@ -234,27 +239,40 @@
   <script src="https://cdn.socket.io/4.3.1/socket.io.min.js"></script>
   <script>
     const socket = io();
-    // Enviar mensagem
+
+    const url = window.location.pathname;
+    const grupoId = url.split('/').pop();
+    socket.emit('join', grupoId);
+
     function enviarMensagem(event) {
       event.preventDefault();
       const mensagemInput = document.querySelector('input[name="mensagem"]');
       const mensagem = mensagemInput.value;
       const url = window.location.pathname;
       const grupoId = url.split('/').pop();
-        console.log(url);
+      console.log(url);
       socket.emit('message', grupoId, mensagem);
 
       mensagemInput.value = '';
     }
-    
+
     socket.on('message', (mensagem) => {
-        console.log('entrou')
-        const mensagensContainer = document.querySelector('.mensagens-container');
-        
-        const mensagemElement = document.createElement('div');
-        mensagemElement.innerHTML = `<div class="mensagem"><div class="nomealuno">Nome do usuário</div><hr><div class="txtmensagem">${mensagem}</div></div>`;
-        mensagensContainer.appendChild(mensagemElement);
-        mensagensContainer.scrollTop = mensagensContainer.scrollHeight;
+      console.log('entrou')
+      const mensagensContainer = document.querySelector('.balao');
+      const mensagemElement = document.createElement('div');
+      mensagemElement.innerHTML = `
+                                <div class="mensagem">
+                                  <div class="nomealuno">
+                                    <% for (var i=0; i < participantes.length; i++) { %>
+                                      <% if (participantes[i].Edv == usuarioId) { %>
+                                        <%= participantes[i].Nome %>
+                                      <% } %>
+                                    <% } %>
+                                  </div>
+                                  <hr>
+                                  <div class="txtmensagem">${mensagem}</div>
+                                </div>`;
+      mensagensContainer.appendChild(mensagemElement);
     });
 
 
